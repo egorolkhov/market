@@ -18,13 +18,14 @@ Cервис, который позволяет сотрудникам обмен
 ```sh
 git clone https://github.com/egorolkhov/market
 cd market
-
+```
 
 ### **Запуск с Docker**
 Для развертывания сервиса используйте команду:
 
 ```sh
 docker-compose up --build
+```
 
 Структура проекта
 market/
