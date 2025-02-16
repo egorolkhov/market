@@ -28,6 +28,7 @@ docker-compose up --build
 ```
 
 Структура проекта
+```
 market/
 │── cmd/                     # Основной entrypoint сервера
 │   └── main.go
@@ -48,3 +49,4 @@ market/
 │── docker-compose.yaml        # Контейнеры для БД
 │── Dockerfile                 # Dockerfile для сервера
 │── go.mod                     # Go-модули
+```
