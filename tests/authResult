@@ -1,0 +1,44 @@
+PS C:\Users\egoro\GolandProjects\avito-2025> hey -n 1000 -c 50 -m POST -H "Content-Type: text/plain" -d '{\"username\": \"user100\", \"password\": \"string111\"}' http://localhost:8080/api/auth
+
+Summary:
+  Total:        14.0382 secs
+  Slowest:      3.7794 secs
+  Fastest:      0.0721 secs
+  Average:      0.5688 secs
+  Requests/sec: 71.2341
+
+
+Response time histogram:
+  0.072 [1]     |
+  0.443 [507]   |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.814 [347]   |■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  1.184 [46]    |■■■■
+  1.555 [18]    |■
+  1.926 [28]    |■■
+  2.296 [12]    |■
+  2.667 [16]    |■
+  3.038 [10]    |■
+  3.409 [3]     |
+  3.779 [12]    |■
+
+
+Latency distribution:
+  10% in 0.1366 secs
+  25% in 0.2198 secs
+  50% in 0.4358 secs
+  75% in 0.5575 secs
+  90% in 1.1835 secs
+  95% in 2.0020 secs
+  99% in 3.5247 secs
+
+Details (average, fastest, slowest):
+  DNS+dialup:   0.0024 secs, 0.0721 secs, 3.7794 secs
+  DNS-lookup:   0.0014 secs, 0.0000 secs, 0.0458 secs
+  req write:    0.0010 secs, 0.0000 secs, 0.1337 secs
+  resp wait:    0.5627 secs, 0.0715 secs, 3.7792 secs
+  resp read:    0.0025 secs, 0.0000 secs, 0.1882 secs
+
+Status code distribution:
+  [200] 1000 responses
+
+

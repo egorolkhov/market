@@ -1,0 +1,43 @@
+PS C:\Users\egoro\GolandProjects\avito-2025> hey -n 1000 -c 50 -m GET -H "Content-Type: text/plain" -H "Cookie: auth_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mzk4MDc5MzIsIlVzZXJJRCI6IjAzYzM5ODRhLTQyMDEtNDMzYi05ZGMxLTljNTA5YjA3YzM4ZSJ9.L7eMM2n17MgqLlac8hzqLR8W1xa1YIpsyAY3LvnC5Hs" http://localhost:8080/api/buy/pen
+
+Summary:
+  Total:        9.5974 secs
+  Slowest:      2.2334 secs
+  Fastest:      0.0014 secs
+  Average:      0.4562 secs
+  Requests/sec: 104.1947
+
+
+Response time histogram:
+  0.001 [1]     |
+  0.225 [462]   |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.448 [183]   |■■■■■■■■■■■■■■■■
+  0.671 [96]    |■■■■■■■■
+  0.894 [82]    |■■■■■■■
+  1.117 [44]    |■■■■
+  1.341 [46]    |■■■■
+  1.564 [32]    |■■■
+  1.787 [35]    |■■■
+  2.010 [17]    |■
+  2.233 [2]     |
+
+
+Latency distribution:
+  10% in 0.0125 secs
+  25% in 0.0851 secs
+  50% in 0.2579 secs
+  75% in 0.6913 secs
+  90% in 1.2845 secs
+  95% in 1.6079 secs
+  99% in 1.9437 secs
+
+Details (average, fastest, slowest):
+  DNS+dialup:   0.0016 secs, 0.0014 secs, 2.2334 secs
+  DNS-lookup:   0.0011 secs, 0.0000 secs, 0.0290 secs
+  req write:    0.0007 secs, 0.0000 secs, 0.1511 secs
+  resp wait:    0.4472 secs, 0.0013 secs, 2.2332 secs
+  resp read:    0.0065 secs, 0.0000 secs, 0.1411 secs
+
+Status code distribution:
+  [200] 200 responses
+  [500] 800 responses

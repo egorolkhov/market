@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Qazxsw2200
+      POSTGRES_DB: avito
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  app:
+    build: .
+    environment:
+      SERVER_ADDRESS: ":8080"
+      POSTGRES_CONN: "postgres://postgres:Qazxsw2200@postgres:5432/avito?sslmode=disable"
+      JWT_SECRET: "qwerty"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+
+  tests:
+    image: golang:1.22  # Используем golang, чтобы был доступен `go test`
+    working_dir: /app
+    volumes:
+      - .:/app  # Подключаем локальный код проекта в контейнер
+    environment:
+      POSTGRES_CONN: "postgres://postgres:Qazxsw2200@postgres:5432/avito?sslmode=disable"
+      JWT_SECRET: "qwerty"
+    depends_on:
+      - postgres
+    command: go test -v ./tests/integrationTests  # Запускаем тесты автоматически
+
+volumes:
+  postgres_data:
+
+

@@ -1,0 +1,27 @@
+PS C:\Users\egoro\GolandProjects\avito-2025> hey -n 5000 -c 50 -m GET -H "Cookie: auth_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mzk4MDM5MjIsIlVzZXJJRCI6ImI5MTYxYmFhLTY2NTMtNGJjYy04NDJhLWIyNDJlMTVlNGJhOCJ9.Gp-kLi4NW3AEC_JLA3KtREY----CkiTR8kO_q-QrqZA" http://localhost:8080/api/info
+
+Summary:
+  Total:        3.2196 secs
+  Slowest:      0.3142 secs
+  Fastest:      0.0030 secs
+  Average:      0.0304 secs
+  Requests/sec: 1552.9654
+
+
+Response time histogram:
+  0.003 [1]     |
+  0.034 [3573]  |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.065 [1112]  |■■■■■■■■■■■■
+  0.096 [173]   |■■
+  0.127 [69]    |■
+  0.159 [20]    |
+  0.190 [23]    |
+  DNS+dialup:   0.0004 secs, 0.0030 secs, 0.3142 secs
+  DNS-lookup:   0.0007 secs, 0.0000 secs, 0.1014 secs
+  req write:    0.0007 secs, 0.0000 secs, 0.1364 secs
+  resp wait:    0.0255 secs, 0.0024 secs, 0.2013 secs
+  resp read:    0.0024 secs, 0.0000 secs, 0.1388 secs
+
+Status code distribution:
+  [200] 5000 responses
+
